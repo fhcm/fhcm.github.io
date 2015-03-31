@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Fundación Heberto Castillo Sus Cuadros</title>
+<style type="text/css"> 
+<!-- 
+body  {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #666666;
+	margin: 0; /* es recomendable ajustar a cero el margen y el relleno del elemento body para lograr la compatibilidad con la configuración predeterminada de los diversos navegadores */
+	padding: 0;
+	text-align: center; /* esto centra el contenedor en los navegadores IE 5*. El texto se ajusta posteriormente con el valor predeterminado de alineación a la izquierda en el selector #container */
+	color: #000000;
+	background-color: #FFF;
+}
+.thrColLiqHdr #container { 
+	width: 80%;  /* esto creará un contenedor con el 80% del ancho del navegador */
+	background: #FFFFFF;
+	margin: 0 auto; /* los márgenes automáticos (conjuntamente con un ancho) centran la página */
+	border: 1px solid #000000;
+	text-align: left; /* esto anula text-align: center en el elemento body. */
+} 
+.thrColLiqHdr #header {
+	padding: 0 10px;  /* este relleno coincide con la alineación izquierda de los elementos de los divs que aparecen bajo él. Si se utiliza una imagen en el #header en lugar de texto, es posible que le interese quitar el relleno. */
+	background-color: #DDDDDD;
+	background-image: url(../Img/cabecera.jpg);
+	background-position: left top;
+	background-repeat: no-repeat;
+} 
+.thrColLiqHdr #header h1 {
+	margin: 0; /* el ajuste en cero del margen del último elemento del div de #header evita la contracción del margen (un espacio inexplicable entre divs). Si el div tiene un borde alrededor, esto no es necesario, ya que también evita la contracción del margen */
+	padding: 10px 0; /* el uso de relleno en lugar de margen le permitirá mantener el elemento alejado de los bordes del div */
+}
+
+/* Sugerencias para barras laterales:
+1. Dado que está trabajando en porcentajes, es conveniente no utilizar relleno lateral en las barras laterales. Se añadirá al ancho en el caso de navegadores que cumplen los estándares, creando un ancho real desconocido. 
+2. El espacio entre el lado del div y los elementos que contiene puede crearse colocando un margen izquierdo y derecho en dichos elementos, como se observa en la regla ".thrColLiqHdr #sidebar1 p".
+3. Dado que Explorer calcula los anchos después de mostrarse el elemento padre, puede que ocasionalmente encuentre errores inexplicables con columnas basadas en porcentajes. Si necesita resultados más predecibles, puede optar por cambiar a columnas con tamaño en píxeles.
+*/
+.thrColLiqHdr #sidebar1 {
+	float: left; /* este elemento debe preceder en el orden de origen a cualquier elemento que desee situar junto a */
+	width: 22%; /* el color de fondo se mostrará a lo largo de todo el contenido de la columna, pero no más allá */
+	padding: 15px 0; /* el relleno superior e inferior crea un espacio visual dentro de este div  */
+	background-color: #FFF;
+}
+.thrColLiqHdr #sidebar2 {
+	float: right; /* este elemento debe preceder en el orden de origen a cualquier elemento que desee situar junto a */
+	width: 23%; /* el color de fondo se mostrará a lo largo de todo el contenido de la columna, pero no más allá */
+	padding: 15px 0; /* el relleno superior e inferior crea un espacio visual dentro de este div */
+	background-color: #FFF;
+}
+.thrColLiqHdr #sidebar1 p, .thrColLiqHdr #sidebar1 h3, .thrColLiqHdr #sidebar2 p, .thrColLiqHdr #sidebar2 h3 {
+	margin-left: 10px; /* deben asignarse los márgenes izquierdo y derecho de cada elemento que vaya a colocarse en las columnas laterales */
+	margin-right: 10px;
+}
+
+/* Sugerencias para mainContent:
+1. El espacio entre el mainContent y las barras laterales se crea con los márgenes izquierdo y derecho del div mainContent.
+2. para evitar la caída de un elemento flotante con una resolución mínima admitida de 800 x 600, los elementos situados dentro del div mainContent deben tener un tamaño de 300px o inferior (incluidas las imágenes).
+3. en el siguiente comentario condicional de Internet Explorer, la propiedad zoom se utiliza para asignar a mainContent "hasLayout." Esto evita diversos problemas específicos de IE.
+*/
+.thrColLiqHdr #mainContent { 
+	margin: 0 24% 0 23.5%; /* los márgenes derecho e izquierdo de este elemento div crean las dos columnas externas de los lados de la página. Con independencia de la cantidad de contenido que incluyan los divs de las barras laterales, permanecerá el espacio de la columna. Puede quitar este margen si desea que el texto del div #mainContent llene el espacio de las barras laterales cuando termine el contenido de cada una de ellas. */
+}
+
+.thrColLiqHdr #footer {
+	padding: 0 10px;
+	background-color: #AF3535;
+} 
+.thrColLiqHdr #footer p {
+	margin: 0; /* el ajuste en cero de los márgenes del primer elemento del pie evitará que puedan contraerse los márgenes (un espacio entre divs) */
+	padding: 10px 0; /* el relleno de este elemento creará espacio, de la misma forma que lo haría el margen, sin el problema de la contracción de márgenes */
+}
+
+/* Varias clases diversas para su reutilización */
+.fltrt { /* esta clase puede utilizarse para que un elemento flote en la parte derecha de la página. El elemento flotante debe preceder al elemento junto al que debe aparecer en la página. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* esta clase puede utilizarse para que un elemento flote en la parte izquierda de la página. El elemento flotante debe preceder al elemento junto al que debe aparecer en la página. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* esta clase debe colocarse en un elemento div o break y debe ser el último elemento antes del cierre de un contenedor que deba incluir completamente a sus elementos flotantes hijos */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+h5 {
+	color: #983434;
+}
+h6 {
+	color: #FFF;
+}
+.thrColLiqHdr #container #footer {
+	color: #FFF;
+}
+--> 
+</style><!--[if IE]>
+<style type="text/css"> 
+/* coloque las reparaciones de css para todas las versiones de IE en este comentario condicional */
+.thrColLiqHdr #sidebar2, .thrColLiqHdr #sidebar1 { padding-top: 30px; }
+.thrColLiqHdr #mainContent { zoom: 1; padding-top: 15px; }
+/* la propiedad zoom propia que se indica más arriba proporciona a IE el hasLayout que necesita para evitar diversos errores */
+</style>
+<![endif]-->
+<script src="../SpryAssets/SpryCollapsiblePanel.js" type="text/javascript"></script>
+<link href="../SpryAssets/SpryCollapsiblePanel.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+a:link {
+	color: #CCC;
+}
+a:hover {
+	color: #CCC;
+}
+a:visited {
+	color: #FF9122;
+}
+a:active {
+	color: #333;
+}
+a {
+	font-weight: bold;
+}
+-->
+</style></head>
+
+<body link="#CCCCCC" class="thrColLiqHdr">
+
+<div id="container">
+ <div id="header">
+    <h1>&nbsp;</h1>
+    <p>&nbsp;</p>
+  <!-- end #header --></div>
+  <div id="sidebar1">
+    <div id="CollapsiblePanel1" class="CollapsiblePanel">
+      <div class="CollapsiblePanelTab" tabindex="0">Heberto Castillo</div>
+      <div class="CollapsiblePanelContent">
+        <p><a href="1.1.html" target="_parent">Biografía</a></p>
+        <p><a href="1.2.html" target="_parent">Semblanza</a></p>
+      </div>
+    </div>
+    <div id="CollapsiblePanel3" class="CollapsiblePanel">
+      <div class="CollapsiblePanelTab" tabindex="0">Textos</div>
+      <div class="CollapsiblePanelContent">
+        <p><a href="2.1.html" target="_parent">Textos de H.C</a></p>
+        <p><a href="2.2.html" target="_parent">Homenajes a H.C</a></p>
+      </div>
+    </div>
+    <div id="CollapsiblePanel2" class="CollapsiblePanel">
+      <div class="CollapsiblePanelTab" tabindex="0">Imágenes</div>
+      <div class="CollapsiblePanelContent">
+        <p><a href="3.1.html" target="_parent">1968</a></p>
+        <p><a href="3.2.html" target="_parent">1988</a></p>
+        <p><a href="3.3.html" target="_parent">Recorridos y marchas</a></p>
+        <p><a href="3.4.html" target="_parent">PMT</a></p>
+<p><a href="3.5.html" target="_parent">PMS</a></p>
+        <p><a href="3.6.html" target="_parent">PRD</a></p>
+        <p><a href="3.7.html" target="_parent">Chiapas</a></p>
+        <p><a href="3.8.html" target="_parent">Senado</a></p>
+        <p><a href="3.9.html" target="_parent">Retratos</a></p>
+        <p><a href="3.10.html" target="_parent">Caricaturas</a></p>
+        <p><a href="3.11.html" target="_parent">Sus cuadros</a></p>
+        <p><a href="3.12.html">Actos conmemorativos</a></p>
+      </div>
+    </div>
+    <div id="CollapsiblePanel5" class="CollapsiblePanel">
+      <div class="CollapsiblePanelTab" tabindex="0">Multimedia</div>
+      <div class="CollapsiblePanelContent">
+        <p><a href="4.1.html" target="_parent">Audio</a></p>
+        <p><a href="4.2.html" target="_parent">Video </a></p>
+      </div>
+    </div>
+    <h5>&nbsp;</h5>
+    <div id="CollapsiblePanel4" class="CollapsiblePanel">
+      <div class="CollapsiblePanelTab" tabindex="0">La Fundación</div>
+      <div class="CollapsiblePanelContent">
+        <p><a href="5.1.html" target="_parent">Actividades</a></p>
+        <p><a href="5.2.html" target="_parent">Instalaciones</a></p>
+        <p><a href="5.3.html" target="_parent">Publicaciones</a></p>
+        <p><a href="5.4.html" target="_parent">Acervo</a></p>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar2">
+    <div id="CollapsiblePanel6" class="CollapsiblePanel">
+      <div class="CollapsiblePanelTab" tabindex="0">Eventos</div>
+      <div class="CollapsiblePanelContent">
+        <p><a href="../Index.html" target="_parent">Eventos activos</a></p>
+      </div>
+    </div>
+    <h5 align="center"><a href="6.1.html"><img src="../Img/contacto.png" width="111" height="30" alt="contacto" longdesc="Img/contacto.png" /></a></h5>
+    <p align="center"><a href="../Index.html" target="_parent"><img src="Img/home_icon.png" alt="home" width="29" height="23" /></a></p>
+    <h3 align="center"><img src="../Img/logo.jpg" width="138" height="160" />
+      <!-- end #sidebar2 -->
+    </h3>
+  </div>
+  <div id="mainContent">
+    <h2>Sus cuadros</h2>
+    <h5>Heberto pintor.</h5>
+    <h5 align="center"><img src="Img/3.jpg" width="378" height="221" alt="3" longdesc="Img/3.jpg" /><br />
+    </h5>
+    <p align="justify">      &quot;No, no voy a hacer una exposición jamás&quot;. ¿Por qué? &quot;Porque me da vergüenza, no soy un pintor profesional, pinto por placer, para relajarme, para dar afecto&quot;...Así solía contestar Heberto. <br />
+    </p>
+    <p align="justify">Desde niño tuvo facilidad para el dibujo y las artes plásticas en general. Apenas a los diez años de edad sus dibujos aparecían en la pantalla del Cine Lux, durante los intermedios, lo que le permitía entrar gratis en compañía de sus amiguitos. Acudió en aquella época con Germán Butze; su intención: colaborar en la revista Chamaco. Al ver los trabajos que Germán realizaba, sintió pena y escondió los suyos bajo el brazo. Butze le pidió que se los mostrara, sonrió, le dio una palmadita y le dijo:&quot;Tienes talento, sigue trabajando&quot;. <br />
+    </p>
+    <p align="justify">Heberto siguió, pero por otras veredas; sin embargo, nunca dejó de arrastrar el lápiz ni el pincel por completo. Conoció a David Alfaro Siqueiros en el Movimiento de Liberación Nacional durante la década de los sesenta y perfeccionó sus técnicas durante su involuntario cautiverio, en la clandestinidad y posteriormente en su encierro en el Palacio Negro de Lecumberri, de 1969 a 1971, en donde pasaba el tiempo estudiando y trabajando y desde donde admiró la escuela de los impresionistas de finales del siglo XIX: Monet, Manet, Renoir, Cezanne y Van Gogh. Más tarde coincidiría nuevamente en el trabajo con Siqueiros, en la creación y construcción del Polyforum Cultural en el Hotel de México. <br />
+    </p>
+    <p align="justify">En sus dibujos es notoria la influencia de su amigo Rogelio Naranjo, quien junto con otros caricaturistas aportaron sus trabajos al quehacer político en la construcción del Partido Mexicano de los Trabajadores. <br />
+    </p>
+    <p align="justify">Pintar y compartir... esos pequeños pero grandes detalles cargados de sentimientos eran característicos en su persona, siempre haciendo un retrato al compañero, al interlocutor, mientras el pasar del tiempo corría sobre las interminables reuniones de trabajo... de política...de su vida. <br />
+    </p>
+    <p align="justify">Dentro de su obra más significativa destaca La Universidad en Lecurnberri, donde queda testimonio de que ni el gobierno más represor pudo exterminar la reflexión y la razón. <br />
+    </p>
+    <p align="justify">Especial contenido anecdótico tiene otro de sus cuadros, el que se negó dos veces a desaparecer; aquel que el 8 de mayo de 1969 Heberto volteara hacia abajo, pisándolo y con ello burlando a los militares que habían logrado finalmente aprehenderlo. La segunda ocasión sobrevivió al atentado del primero de enero de 1971 perpetrado por los presos comunes, quienes bajo los efectos de enervantes y azuzados por las autoridades del penal atacaron a los presos políticos, robándoles sus escasas pertenencias. Ahí de nueva cuenta lo rescataría parándose otra vez sobre él. Es el cuadro que cuelga sobre una de las paredes de la que fuera su casa y la pintura es de Tere, su compañera. <br />
+    </p>
+    <p align="justify">Heberto tradicionalmente regalaba una tarjeta con motivo del fin de año. Así, en diciembre de 1996 realizó un retrato de una niña chiapaneca cargando su pobreza; al interior, uno de sus últimos sueños, de sus tercos deseos, una tarea para nosotros los que aún estamos:&quot;Paz con justicia y dignidad para Chiapas en 1997&quot;.</p>
+    <p><a href="3.11.1.html" target="_parent">Sus cuadros</a><br />
+      <br />
+      <!-- end #mainContent -->
+    </p>
+  </div>
+	<!-- Este elemento de eliminación siempre debe ir inmediatamente después del div #mainContent para forzar al div #container a que contenga todos los elementos flotantes hijos --><br class="clearfloat" />
+  <div id="footer">
+    <h5 align="center" class="thrColLiqHdr">
+        <!-- end #footer -->
+        <br />
+      </h5>
+      <p align="center">Fundación Heberto Castillo A.C. </p>
+      <p align="center">Viena 34, Colonia del Carmen, Delegación Coyoacán, México D.F.</p>
+      <p align="center">Teléfonos/ 01 (55) 5554-8278 y 01 (55) 5659-0894. </p>
+      <p align="center">Correo electrónico/ fhcmac@prodigy.net.mx </p>
+  </div>
+  <!-- end #container -->
+</div>
+<script type="text/javascript">
+<!--
+var CollapsiblePanel1 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel1", {contentIsOpen:false});
+var CollapsiblePanel3 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel3", {contentIsOpen:false, enableAnimation:false});
+var CollapsiblePanel2 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel2", {contentIsOpen:false});
+var CollapsiblePanel4 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel4", {contentIsOpen:false});
+var CollapsiblePanel5 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel5", {contentIsOpen:false});
+var CollapsiblePanel6 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel6", {contentIsOpen:false});
+//-->
+</script>
+</body>
+</html>

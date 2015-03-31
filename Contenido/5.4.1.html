@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Fundación Heberto Castillo La Fundación Acervo</title>
+<style type="text/css"> 
+<!-- 
+body  {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #666666;
+	margin: 0; /* es recomendable ajustar a cero el margen y el relleno del elemento body para lograr la compatibilidad con la configuración predeterminada de los diversos navegadores */
+	padding: 0;
+	text-align: center; /* esto centra el contenedor en los navegadores IE 5*. El texto se ajusta posteriormente con el valor predeterminado de alineación a la izquierda en el selector #container */
+	color: #000000;
+	background-color: #FFF;
+}
+.thrColLiqHdr #container { 
+	width: 80%;  /* esto creará un contenedor con el 80% del ancho del navegador */
+	background: #FFFFFF;
+	margin: 0 auto; /* los márgenes automáticos (conjuntamente con un ancho) centran la página */
+	border: 1px solid #000000;
+	text-align: left; /* esto anula text-align: center en el elemento body. */
+} 
+.thrColLiqHdr #header {
+	padding: 0 10px;  /* este relleno coincide con la alineación izquierda de los elementos de los divs que aparecen bajo él. Si se utiliza una imagen en el #header en lugar de texto, es posible que le interese quitar el relleno. */
+	background-color: #DDDDDD;
+	background-image: url(../Img/cabecera.jpg);
+	background-position: left top;
+	background-repeat: no-repeat;
+} 
+.thrColLiqHdr #header h1 {
+	margin: 0; /* el ajuste en cero del margen del último elemento del div de #header evita la contracción del margen (un espacio inexplicable entre divs). Si el div tiene un borde alrededor, esto no es necesario, ya que también evita la contracción del margen */
+	padding: 10px 0; /* el uso de relleno en lugar de margen le permitirá mantener el elemento alejado de los bordes del div */
+}
+
+/* Sugerencias para barras laterales:
+1. Dado que está trabajando en porcentajes, es conveniente no utilizar relleno lateral en las barras laterales. Se añadirá al ancho en el caso de navegadores que cumplen los estándares, creando un ancho real desconocido. 
+2. El espacio entre el lado del div y los elementos que contiene puede crearse colocando un margen izquierdo y derecho en dichos elementos, como se observa en la regla ".thrColLiqHdr #sidebar1 p".
+3. Dado que Explorer calcula los anchos después de mostrarse el elemento padre, puede que ocasionalmente encuentre errores inexplicables con columnas basadas en porcentajes. Si necesita resultados más predecibles, puede optar por cambiar a columnas con tamaño en píxeles.
+*/
+.thrColLiqHdr #sidebar1 {
+	float: left; /* este elemento debe preceder en el orden de origen a cualquier elemento que desee situar junto a */
+	width: 22%; /* el color de fondo se mostrará a lo largo de todo el contenido de la columna, pero no más allá */
+	padding: 15px 0; /* el relleno superior e inferior crea un espacio visual dentro de este div  */
+	background-color: #FFF;
+}
+.thrColLiqHdr #sidebar2 {
+	float: right; /* este elemento debe preceder en el orden de origen a cualquier elemento que desee situar junto a */
+	width: 23%; /* el color de fondo se mostrará a lo largo de todo el contenido de la columna, pero no más allá */
+	padding: 15px 0; /* el relleno superior e inferior crea un espacio visual dentro de este div */
+	background-color: #FFF;
+}
+.thrColLiqHdr #sidebar1 p, .thrColLiqHdr #sidebar1 h3, .thrColLiqHdr #sidebar2 p, .thrColLiqHdr #sidebar2 h3 {
+	margin-left: 10px; /* deben asignarse los márgenes izquierdo y derecho de cada elemento que vaya a colocarse en las columnas laterales */
+	margin-right: 10px;
+}
+
+/* Sugerencias para mainContent:
+1. El espacio entre el mainContent y las barras laterales se crea con los márgenes izquierdo y derecho del div mainContent.
+2. para evitar la caída de un elemento flotante con una resolución mínima admitida de 800 x 600, los elementos situados dentro del div mainContent deben tener un tamaño de 300px o inferior (incluidas las imágenes).
+3. en el siguiente comentario condicional de Internet Explorer, la propiedad zoom se utiliza para asignar a mainContent "hasLayout." Esto evita diversos problemas específicos de IE.
+*/
+.thrColLiqHdr #mainContent { 
+	margin: 0 24% 0 23.5%; /* los márgenes derecho e izquierdo de este elemento div crean las dos columnas externas de los lados de la página. Con independencia de la cantidad de contenido que incluyan los divs de las barras laterales, permanecerá el espacio de la columna. Puede quitar este margen si desea que el texto del div #mainContent llene el espacio de las barras laterales cuando termine el contenido de cada una de ellas. */
+}
+
+.thrColLiqHdr #footer {
+	padding: 0 10px;
+	background-color: #AF3535;
+} 
+.thrColLiqHdr #footer p {
+	margin: 0; /* el ajuste en cero de los márgenes del primer elemento del pie evitará que puedan contraerse los márgenes (un espacio entre divs) */
+	padding: 10px 0; /* el relleno de este elemento creará espacio, de la misma forma que lo haría el margen, sin el problema de la contracción de márgenes */
+}
+
+/* Varias clases diversas para su reutilización */
+.fltrt { /* esta clase puede utilizarse para que un elemento flote en la parte derecha de la página. El elemento flotante debe preceder al elemento junto al que debe aparecer en la página. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* esta clase puede utilizarse para que un elemento flote en la parte izquierda de la página. El elemento flotante debe preceder al elemento junto al que debe aparecer en la página. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* esta clase debe colocarse en un elemento div o break y debe ser el último elemento antes del cierre de un contenedor que deba incluir completamente a sus elementos flotantes hijos */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+h5 {
+	color: #983434;
+}
+h6 {
+	color: #FFF;
+}
+.thrColLiqHdr #container #footer {
+	color: #FFF;
+}
+--> 
+</style><!--[if IE]>
+<style type="text/css"> 
+/* coloque las reparaciones de css para todas las versiones de IE en este comentario condicional */
+.thrColLiqHdr #sidebar2, .thrColLiqHdr #sidebar1 { padding-top: 30px; }
+.thrColLiqHdr #mainContent { zoom: 1; padding-top: 15px; }
+/* la propiedad zoom propia que se indica más arriba proporciona a IE el hasLayout que necesita para evitar diversos errores */
+</style>
+<![endif]-->
+<script src="../SpryAssets/SpryCollapsiblePanel.js" type="text/javascript"></script>
+<link href="../SpryAssets/SpryCollapsiblePanel.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+a:link {
+	color: #CCC;
+}
+a:hover {
+	color: #CCC;
+}
+a:visited {
+	color: #FF9122;
+}
+a:active {
+	color: #333;
+}
+a {
+	font-weight: bold;
+}
+-->
+</style></head>
+
+<body link="#CCCCCC" class="thrColLiqHdr">
+
+<div id="container">
+ <div id="header">
+    <h1>&nbsp;</h1>
+    <p>&nbsp;</p>
+  <!-- end #header --></div>
+  <div id="sidebar1">
+    <div id="CollapsiblePanel1" class="CollapsiblePanel">
+      <div class="CollapsiblePanelTab" tabindex="0">Heberto Castillo</div>
+      <div class="CollapsiblePanelContent">
+        <p><a href="1.1.html" target="_parent">Biografía</a></p>
+        <p><a href="1.2.html" target="_parent">Semblanza</a></p>
+      </div>
+    </div>
+    <div id="CollapsiblePanel3" class="CollapsiblePanel">
+      <div class="CollapsiblePanelTab" tabindex="0">Textos</div>
+      <div class="CollapsiblePanelContent">
+        <p><a href="2.1.html" target="_parent">Textos de H.C</a></p>
+        <p><a href="2.2.html" target="_parent">Homenajes a H.C</a></p>
+      </div>
+    </div>
+    <div id="CollapsiblePanel2" class="CollapsiblePanel">
+      <div class="CollapsiblePanelTab" tabindex="0">Imágenes</div>
+      <div class="CollapsiblePanelContent">
+        <p><a href="3.1.html" target="_parent">1968</a></p>
+        <p><a href="3.2.html" target="_parent">1988</a></p>
+        <p><a href="3.3.html" target="_parent">Recorridos y marchas</a></p>
+        <p><a href="3.4.html" target="_parent">PMT</a></p>
+<p><a href="3.5.html" target="_parent">PMS</a></p>
+        <p><a href="3.6.html" target="_parent">PRD</a></p>
+        <p><a href="3.7.html" target="_parent">Chiapas</a></p>
+        <p><a href="3.8.html" target="_parent">Senado</a></p>
+        <p><a href="3.9.html" target="_parent">Retratos</a></p>
+        <p><a href="3.10.html" target="_parent">Caricaturas</a></p>
+        <p><a href="3.11.html" target="_parent">Sus cuadros</a></p>
+        <p><a href="3.12.html">Actos conmemorativos</a></p>
+      </div>
+    </div>
+    <div id="CollapsiblePanel5" class="CollapsiblePanel">
+      <div class="CollapsiblePanelTab" tabindex="0">Multimedia</div>
+      <div class="CollapsiblePanelContent">
+        <p><a href="4.1.html" target="_parent">Audio</a></p>
+        <p><a href="4.2.html" target="_parent">Video </a></p>
+      </div>
+    </div>
+    <h5>&nbsp;</h5>
+    <div id="CollapsiblePanel4" class="CollapsiblePanel">
+      <div class="CollapsiblePanelTab" tabindex="0">La Fundación</div>
+      <div class="CollapsiblePanelContent">
+        <p><a href="5.1.html" target="_parent">Actividades</a></p>
+        <p><a href="5.2.html" target="_parent">Instalaciones</a></p>
+        <p><a href="5.3.html" target="_parent">Publicaciones</a></p>
+        <p><a href="5.4.html" target="_parent">Acervo</a></p>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar2">
+    <div id="CollapsiblePanel6" class="CollapsiblePanel">
+      <div class="CollapsiblePanelTab" tabindex="0">Eventos</div>
+      <div class="CollapsiblePanelContent">
+        <p><a href="../Index.html" target="_parent">Eventos activos</a></p>
+      </div>
+    </div>
+    <h5 align="center"><a href="6.1.html"><img src="../Img/contacto.png" width="111" height="30" alt="contacto" longdesc="Img/contacto.png" /></a></h5>
+    <p align="center"><a href="../Index.html" target="_parent"><img src="Img/home_icon.png" alt="home" width="29" height="23" /></a></p>
+    <h3 align="center"><img src="../Img/logo.jpg" width="138" height="160" />
+      <!-- end #sidebar2 -->
+    </h3>
+  </div>
+  <div id="mainContent">
+    <h2>Acervo</h2>
+    <p align="justify"><strong>Actividades profesionales.</strong></p>
+    <p align="justify">Instituto de Investigaciones en ingeniería y arquitectura.</p>
+    <p align="justify">Contenido: Esta serie está conformada por proyectos de construcción que se elaboraron en el Instituto de Investigaciones en Ingeniería y Arquitectura. También se localiza correspondencia y documentos del Ingeniero Heberto Castillo relacionados con su trabajo como asesor de la Secretaría de Comunicaciones y Transportes, documentos relacionados con su trabajo como perito responsable en construcciones. El presupuesto para estudio de mecánica de suelos para los puentes de &quot; La Pochata y Puxmetacan&quot; en el estado de Veracruz y otros documentos referentes a asesorías en calculo estructural como por ejemplos las construcciones del Centro de Convenciones y Comercial Tabasco 2000 y del Hotel Centro de Convenciones en Morelia.</p>
+    <p align="justify">&nbsp;</p>
+    <p align="justify">Distrito Federal. Construcción/Sismos.</p>
+    <p align="justify">Contenido: Recortes de prensa referentes a los sismos en el Distrito Federal. Ponencias del VIII Congreso Nacional de Ingeniería Sísmica. Los artículos que el Ingeniero Heberto Castillo Martínez escribió sobre este asunto como por ejemplo el titulado: &quot; Algunas ideas sobre qué hacer para disminuir los daños que provocan los sismos&quot; y la entrevista al Ingeniero Castillo quien manifiesta haber desarrollado una estructura antisísmica con la construcción de tres túneles que servirían como rompe - sismos.</p>
+    <p align="justify">&nbsp;</p>
+    <p align="justify">Inventos y patentes.</p>
+    <p align="justify">Contenido: Correspondencia que se generó en torno a las patentes de los inventos del Ingeniero Heberto Castillo Martínez, como la tridilosa, bosquejos y descripción de los siguientes inventos: Mejoras en estructura para obra falsa, astillero o dique flotante y la panga insumergible entre otros.</p>
+    <p align="justify">&nbsp;</p>
+    <p align="justify">Apuntes de ingeniería.</p>
+    <p align="justify">Contenido: Libretas de los apuntes del Ingeniero Heberto Castillo Martínez cuando era estudiante. Su tesis profesional. Revista Ingeniería, dedicada al estudio del Ing. Castillo, titulado: &quot;La barra en el espacio&quot;. Apuntes referentes a la construcción de edificios. Programa de puertos industriales o distritos industriales marítimos en México. Apuntes de los cursos de educación continua de la Facultad de Ingeniería de la UNAM: Diseño y construcción de pavimentos. Segundo curso. Curso: Economía: Fundamentos y aplicaciones. Manual &quot;Model II Scripsit 2.0&quot; Conferencia del Ing. Castillo titulada: &quot; Geometría matricial&quot;. Revistas de ingeniería. </p>
+    <p align="justify">&nbsp;</p>
+    <p align="justify">CONACYT Ciencia y tecnología.</p>
+    <p align="justify">Contenido: Informes de actividades del Consejo Nacional de Ciencia y Tecnología (CONACYT). Convocatorias del CONACYT, como la del seminario de políticas para el desarrollo científico y tecnológico de México. Informes de gastos federales ejercidos en ciencia y tecnología. Carpetas informativas del CONACYT y del Senado que contienen leyes y anteproyectos. Correspondencia dirigida al Ing. Heberto Castillo en la que se tratan diversos asuntos como la denuncia de falta de apoyo a los programas de posgrado e invitaciones a exposiciones y eventos. </p>
+    <p align="justify">&nbsp;</p>
+    <p align="justify">Ecología. Recuperación ambiental. COPERA.</p>
+    <p align="justify">Contenido: Recortes de prensa: Noticias referentes al grupo de los cien. Los comentarios del Ing. Heberto Castillo referentes a la contaminación. Evaluaciones preliminares del Instituto de Ingeniería de la UNAM referentes a los ventiladores ecológicos y evaluación final. Documentos de la Comisión de ecología y medio ambiente del Senado de la República. Recortes de prensa referentes a las antenas aéreas; el proyecto para hacer llover con técnica rusa. Reporte fotográfico de este proyecto. Reporte fotográfico de la contaminación ambiental en el Río Balsas. Proyectos para reciclar basura. Denuncia contra el proyecto del canal intracostero tamaulipeco. Libro: Desarrollo Sustentable ¿Una solución? ¿Una utopía? Memorias de la Secretaría del Medio Ambiente.</p>
+    <p align="justify">&nbsp;</p>
+    <p align="justify">Asuntos agrarios.</p>
+    <p align="justify">Contenido: Documentos sobre problemas agrarios, como los siguientes: Los cañeros en Álamo Veracruz, la problemática y demanda de las comunidades ixtleras. Cartas de demandas del Movimiento de los cuatrocientos pueblos, dirigidas al Senador Heberto Castillo demandado solución al rezago agrario. Conferencias y libros referentes a la reforma agraria. Documentos de la Cámara de Diputados como por ejemplo: El proyecto de reformas y adiciones a la Ley Forestal. La Ley de aguas forestales. </p>
+<p align="justify">&nbsp;</p>
+    <p align="justify"><strong>Actividades políticas.</strong></p>
+    <p align="justify">Movimiento Mundial por la Paz<br />
+      MOMPAZ.</p>
+    <p align="justify">Contenido: Directorio de participantes en el Consejo Mundial por la Paz. Informe de las sesiones de los representantes nacionales de los comités por la paz que tuvieron lugar en Berlín del 28 de febrero al 3 de marzo de 1965. Correspondencia sobre el desarme mundial. </p>
+    <p align="justify">&nbsp;</p>
+    <p align="justify">Movimiento de Liberación Nacional MLN.</p>
+    <p align="justify">Contenido: Documentos de la Conferencia Latinoamericana por la soberanía nacional. Folletos, periódicos y revistas del Movimiento de Liberación Nacional, como el folleto escrito por el Ingeniero Castillo titulado: La lucha de liberación en México o la revista Liberación. Documentos de la Primera Conferencia de Solidaridad con los pueblos de Asia, África y América Latina realizada en la Habana en enero de 1966. Correspondencia: 533 oficios girados en el año de 1964 referentes al Movimiento de Liberación Nacional. Boletines del MLN con un mensaje de Genera Vázquez Rojas. Manuel Terrazas, Martha Borquez, Manuel Marcué Pardiñas, González Pedrero, López Cámara, Gral. Lázaro Cárdenas del Río, Alonso Aguilar Zinzer, García Tellez, Garzón, Cuauhtémoc Cárdenas Solórzano, Adelina Zendejas, Lic. Magallón, Heberto Castillo Martínez, Clementina Batalla de Basols. </p>
+    <p align="justify">&nbsp;</p>
+    <p align="justify">Movimiento Estudiantil de 1968.</p>
+    <p align="justify">Contenido: Revista ¿por qué? Volantes y recortes de prensa referentes a la detención del Ing. Heberto Castillo en el año de1969. Documentos referentes al proceso de formal prisión del Ing. Heberto Castillo. Correspondencia de cuando estuvo en prisión. Carta de protesta que firmaron los profesores de la Facultad de Ingeniería de la UNAM en la que denunciaron los atropellos que sufrieron estudiantes que apoyaron a maestros del SNTE el 10 de junio de 1971. Recortes de periódicos referentes a la represión del 10 de junio de 1971 y a la agresión contra Heberto Castillo y Demetrio Vallejo el 4 de agosto de 1977. Folletos escritos por Heberto Castillo titulados: Apuntes para el quehacer político y a la generación 1966 - 1970 facultad de ingeniería. Breve análisis sobre el Movimiento Estudiantil. </p>
+    <p align="justify">&nbsp;</p>
+    <p align="justify">Comisión de Concordia y Pacificación COCOPA.</p>
+    <p align="justify">Contenido: Recortes de prensa, Noticias referentes a la COCOPA. Artículo mecanuscrito de Heberto Castillo, titulado: &quot;En la selva con el EZLN&quot;. Documentos del foro sobre Derechos y Culturas indígenas, versiones estenográficas de las mesas redondas sobre diferentes temas como por ejemplo: Participación y representación política de los indígenas, San Andrés Larrainzar Chiapas 189 - oct. 95. Reporte fotográfico titulado: Dialogo por la paz entre el EZLN y el Gobierno Federal, la CONAI y la Comisión de Concordia y Pacificación. 1995. Imágenes de San Andrés Larrainzar. Documentos del PRD referentes a la COCOPA, como por ejemplo: Denuncia de situaciones violentas Chiapas realizada por la Diputada Adriana Luna Parra y Trejo Lerdo. Carpeta sobre la cuestión indígena. Grupo Parlamentario del PRD en el Congreso de la Unión. 1995. Las propuestas de reforma y los acuerdos de San Andrés. Febrero 16, 1996.</p>
+    <p align="justify">&nbsp;</p>
+    <p align="justify">PEMEX.</p>
+    <p align="justify">Contenido: Libros referentes al tema del petróleo, como por ejemplo: Tablas para el cálculo del Petróleo. Julio Baz 1916. Sobre el petróleo de México. Conferencias SEP .1938. Los energéticos en México. Heberto Castillo. Universidad Autónoma de Coahuila. 1979. Recopilación de Documentos oficiales del Conflicto de orden económico de la industria petrolera. Secretaría de Patrimonio Nacional 1963. Publicaciones de PEMEX de investigación y análisis, como por ejemplo: Del libro Natural Gas. Fuel for the future? A world suavey 1979. Informes de diferentes directores de PEMEX, como por ejemplo los del Ing. Antonio Dovali de los años 1971 - 1976.Boletines y Anuarios estadísticos de PEMEX. Denuncia contra Francisco Rojas Director General de PEMEX. Comparecencias de Jorge Díaz Serrano ante la Cámara de Senadores. Observaciones de Laura Itzel Castillo a la convocatoria para la adquisición de acciones la petroquímica Morelos. Documentos de la Cámara de Diputados: Información técnica y financiera de empresas filiales como: Camargo y Cangrejera. Cuarta Reunión de trabajo del Comisión de energéticos. </p>
+    <p align="justify">&nbsp;</p>
+    <p align="justify">Cámara de Senadores.</p>
+    <p align="justify">Contenido: Intervenciones Ing. Heberto Castillo en el Senado. Publicaciones de la Cámara de Senadores: Folletos: Fortalecimiento del Pacto Federal. V Informe Semestral de trabajo Legislativo. Documentos de las Sesiones de Noviembre de 1994. Versión estenográfica del desayuno Zedillo - Senadores. Plan financiero de la deuda pública mexicana. Febrero de 1995. Encuentro por la Soberanía Nacional. Memoria del evento realizado el 21 de julio de 1995 en el teatro de la ciudad, folletos, mecanuscritos y faxes transmitidos de este evento. Documentos del Centro de informática legislativa del Senado de la República (CILSEN). Gestorías diversas. Comisiones Unidas de Hacienda, de Instituciones de Crédito y de Estudios Legislativos; Ley para regular las agrupaciones financieras. De la Ley de instituciones de crédito. Informe sobre la entrega a Las Naciones Unidas del Informe Nacional de México. Síntesis parlamentarias.</p>
+    <p align="justify">&nbsp;</p>
+    <p align="justify">Cámara de Diputados.</p>
+    <p align="justify">Contenido: Documentos de diversos asuntos relacionados con la política nacional e internacional como por ejemplo los siguientes: Fotocopia del acta Constitutiva de la Federación de los Estados Unidos Mexicanos 31 - I - 1824. Reporte anual del Banco Mundial 1979. Problemas y perspectivas del abasto en México. Programa Nacional de Consulta popular. Compilación jurídica de Radiodifusión. Dirección de radio 1982. Documentos generados en las sesiones de la Cámara de Diputados y relacionados con su propia actividad como por ejemplo: Presupuesto de egresos de la Federación 1986. Plan Nacional de Desarrollo 1995 - 2000. Ley orgánica del Congreso General de los Estados Unidos Mexicano 1994. Cámara de Diputados. Sesión pública ordinaria celebrada el lunes 28 de noviembre de 1994. Convenio entre el Sindicato Mexicano de electricistas y la Compañía de Luz y Fuerza 1999. Reunión de Trabajo. SEPESCA. Sector Pesquero de Lázaro Cárdenas. 1994. Intervenciones del Ingeniero Heberto Castillo en la Cámara de Diputados. 1986 - 1987.Compendio de Prensa. Cámara de Diputados. Coordinación general de comunicación social. Martes 2 y miércoles 3 de febrero de 1999. Comisión de Equidad y Género. Taller par Diputadas Locales y Federales. </p>
+    <p align="justify">&nbsp;</p>
+    <p align="justify"><strong>Partidos Políticos.</strong></p>
+    <p align="justify">Comité Nacional de Auscultación y Organización CNAO.</p>
+    <p align="justify">Contenido: Antecedentes de la CNAO: Recortes de prensa: Año 1971, noticias referentes a la formación de un nuevo partido político en México, por ejemplo: Anuncia Heberto Castillo el propósito de crear una nueva organización política, 21 de septiembre de 1971. Intelectuales de izquierda darán vida a un nuevo partido. Intelectuales líderes obreros intentaran organizar las izquierdas en todo el país. Los disidentes del CNAO se reunirán el día 24. La Revista Insurgencia Popular. Órgano oficial del CENAO. Números correspondientes a los años de 1973 a 1975. </p>
+    <p align="justify">&nbsp;</p>
+    <p align="justify">Partido Mexicano de los Trabajadores PMT.</p>
+    <p align="justify">Contenido: Declaración de principios. Programa, estatutos. Revista Los agachados: &quot;El PMT ¿oposición o paleros?&quot; 1975. Correspondencia del Comité Nacional del PMT. Documentos manuscritos del Ing. Heberto Castillo referentes al PMT. Documentos del PMT y la Cámara de Diputados. Correspondencia entre Diputados. Planes de trabajo del PMT. Documentos del Comité Nacional del PMT. Correspondencia: Renuncias a cargos de dirección o de partido. Correspondencia sobre diversos asuntos con otras organizaciones nacionales e internacionales. Periódico El Libertario. Órgano Oficial del PMT. Marzo 1986. Reporte fotográfico: Representantes del PMT en Cuba. </p>
+    <p align="justify">&nbsp;</p>
+    <p align="justify">Partido Mexicano Socialista PMS.</p>
+    <p align="justify">Contenido: Convenio de fusión para la creación del Partido Mexicano Socialista. Recortes de prensa: Noticias referentes al PMS, por ejemplo: Arranca la fusión. Nace el Partido Mexicano Socialista. Acepto Heberto Castillo su precandidatura a la Presidencia. Peligra la soberanía económica y política dice el PMS. Documentos del área de estudios y análisis. Estudios regionales de la campaña presidencial del PMS 198. Diapositivas de la campaña del PMS. Periódico la Unidad. Órgano oficial del PMS. Presidencia de la República por el PMS, 1988.</p>
+    <p align="justify">&nbsp;</p>
+    <p align="justify">Fusión de la izquierda.</p>
+    <p align="justify">Contenido: Recortes de prensa: Noticias referentes a la fusión de partidos de izquierda en México, como por ejemplo: Se unifica la izquierda para tomar el poder. Como se gesto la fusión de la izquierda. El nuevo partido tendrá 450 mil electores. </p>
+    <p align="justify">&nbsp;</p>
+    <p align="justify">Partido de la Revolución Democrática PRD.</p>
+    <p align="justify">Contenido: Recortes de prensa: Noticias referentes a la creación del PRD. Boletín Corre la voz. Discursos de la tercera reunión nacional del PRD. Documentos de Congresos del PRD, como por ejemplo: Proyecto del Reglamento del Primer Congreso Nacional del PRD. Oct. 1990. Documentos de Convenciones Nacionales como la Convención Nacional Electoral en Michoacán en el año de 1993.</p>
+    <p align="justify">&nbsp;</p>
+    <p align="justify"><strong>Correspondencia</strong></p>
+    <p align="justify">Actividades profesionales.</p>
+    <p align="justify">Contenido: Correspondencia entre los Ingenieros Cuauhtémoc Cárdenas y Heberto Castillo producida durante sus viajes a Italia, Francia, China, España, Suecia y otros países. Tratan en esta correspondencia de temas de política y proyectos de trabajo, como por ejemplo: El proyecto de la constructora Inde, la coordinación de estudios para la planeación de la cuenca del río Balsas y la coordinación de estudios de tipo económico y social. Comentarios sobre las labores en el río Balsas. La causa obrera.<br />
+      Correspondencia referente a los asuntos de la construcción, como por ejemplo: Invitación de la Cámara Nacional de la Industria de la Construcción a una conferencia sobre el análisis y diseño de estructuras. Carta del Ing. Sergio González Karg, Vocal Ejecutivo del programa de reconstrucción Nonoalco / Tlatlelolco. Contrato de licencia de explotación de patentes de invención y prestaciones de servicios profesionales entre Técnicas Constructivas y el Ingeniero Heberto Castillo. </p>
+    <p align="justify">&nbsp;</p>
+    <p align="justify">Actividades políticas.</p>
+    <p align="justify">Contenido: Correspondencia que sostuvo el General Lázaro Cárdenas con Presidentes y Embajadores de diferentes países y el Comité de desarme de Ginebra Suiza, la temática de las cartas es la paz mundial. 1943 - 1969. <br />
+      Correspondencia entre el Ing. Heberto Castillo y varias instituciones como las siguientes: Instituto Federal Electoral. Junta Local Ejecutiva del Distrito Federal. Procuraduría General de la República. Secretaría Particular. Secretaría de Comercio. Dirección General de Protección al Consumidor Departamento de Dictámenes. <br />
+      Correspondencia de denuncias, como por ejemplo: Carta de los pequeños propietarios del Ejido Santiago Caparrozo. Denuncian a la Secretaría de la SARH por no pagar los cultivos de maíz del año de 1993. Carta de denuncia publicada en el diario de Xalapa. Se denuncia el homicidio de Gladis Avendaño. Carta en la que el Profesor Francisco Santiago solicitó al Ing. Heberto Castillo su intervención ante los problemas de persecución y encarcelamiento en su contra. <br />
+    </p>
+    <p align="justify">&nbsp;</p>
+    <p align="justify">Correspondencia social.</p>
+    <p align="justify">Contenido: Cartas de felicitaciones de Navidad dirigidas al Senador Heberto Castillo.1996 y 1997. Cartas que recibió el Ing. Heberto Castillo en las que le desearon una recuperación de su salud. Cartas de condolencia que recibió la Sra. Teresa Juárez de Castillo y Familia por motivo del fallecimiento del Ing. Heberto Castillo. <br />
+    </p>
+    <p align="justify">&nbsp;</p>
+    <p align="justify"><strong>Periodista</strong><br />
+      </p>
+    <p align="justify">Obra escrita. Borradores y publicaciones.</p>
+    <p align="justify">Contenido: Recortes de prensa: Recopilación de más de dos mil artículos escritos por el Ing. Heberto Castillo Martínez y publicados en las revistas Siempre, Proceso, Sucesos, Los Agachados y en los periódicos El Universal, Ovaciones, Novedades y algunos periódicos extranjeros. Se localizan los mecanuscritos de los artículos publicados en el periódico El Universal. </p>
+    <p align="justify">&nbsp;</p>
+    <p align="justify">Entrevistas.</p>
+    <p align="justify">Contenido: Recortes de prensa: Recopilación de las entrevistas que concedió el Ingeniero Heberto Castillo a la prensa nacional e internacional, como por ejemplo: &quot;Un político de izquierda de corte empresarial&quot;. Revista Momento. Puebla. &quot;no se ha evaluado la experiencia del 68. Periódico Unión. Entre la prensa internacional se encuentran los periódicos The Washingtyon Post, The New York Times, Le Monde Diplomatique y otros.<br />
+      <!-- end #mainContent --></p>
+</div>
+	<!-- Este elemento de eliminación siempre debe ir inmediatamente después del div #mainContent para forzar al div #container a que contenga todos los elementos flotantes hijos --><br class="clearfloat" />
+  <div id="footer">
+    <h5 align="center" class="thrColLiqHdr">
+        <!-- end #footer -->
+        <br />
+      </h5>
+      <p align="center">Fundación Heberto Castillo A.C. </p>
+      <p align="center">Viena 34, Colonia del Carmen, Delegación Coyoacán, México D.F.</p>
+      <p align="center">Teléfonos/ 01 (55) 5554-8278 y 01 (55) 5659-0894. </p>
+      <p align="center">Correo electrónico/ fhcmac@prodigy.net.mx </p>
+  </div>
+  <!-- end #container -->
+</div>
+<script type="text/javascript">
+<!--
+var CollapsiblePanel1 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel1", {contentIsOpen:false});
+var CollapsiblePanel3 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel3", {contentIsOpen:false, enableAnimation:false});
+var CollapsiblePanel2 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel2", {contentIsOpen:false});
+var CollapsiblePanel4 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel4", {contentIsOpen:false});
+var CollapsiblePanel5 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel5", {contentIsOpen:false});
+var CollapsiblePanel6 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel6", {contentIsOpen:false});
+//-->
+</script>
+</body>
+</html>
